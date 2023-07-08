@@ -102,7 +102,7 @@ footer .social img {
     margin-right: 55px;
 }
 /* portfolio gallery */
-#gallery-intro {
+#gallery-intro, #about-info {
     font-size: medium;
     color: #4F4F4F;
     margin: auto;
@@ -207,3 +207,19 @@ footer .social img {
   img.demo {
     opacity: 0.6;
   }
+
+.about-grid h1{
+    margin: auto;
+    width: 55%;
+    font-size: 1.3em;
+}
+#about-images {
+    display: flex;
+    width: 55%;
+    margin: auto;
+    height: 13em;
+    gap: 5px;
+    padding: 10px;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
