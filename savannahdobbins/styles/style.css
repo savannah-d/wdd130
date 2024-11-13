@@ -22,8 +22,8 @@ header {
     background-color: white;
 }
 .logo {
-    width: 250px;
-    margin-left: 215px;
+    width: 20vw; /* 20% of the viewport width */
+    margin-left: 20vw;
 }
 #logo_link {
     padding-top: 5px;
@@ -154,7 +154,7 @@ footer .social img {
   
   /* The Close Button */
   .close {
-    color: white;
+    color: #999;
     position: absolute;
     top: 10px;
     right: 25px;
