@@ -199,42 +199,49 @@
             </div>
         </div>
         <script>
-            // Open the Modal
-            function openModal() {
+          var slideIndex = 1;  // Start at the first slide
+          var slides = document.getElementsByClassName("mySlides");
+      
+          // Open the modal and show the first slide
+          function openModal() {
               document.getElementById("myModal").style.display = "block";
-            }
-            
-            // Close the Modal
-            function closeModal() {
+          }
+      
+          // Close the modal
+          function closeModal() {
               document.getElementById("myModal").style.display = "none";
-            }
-            
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            // Next/previous controls
-            function plusSlides(n) {
+          }
+      
+          // Set the current slide based on the passed index
+          function currentSlide(n) {
+              slideIndex = n;  // Update slideIndex to the clicked image
+              showSlides(slideIndex);  // Show the correct slide
+          }
+      
+          // Next/Previous controls
+          function plusSlides(n) {
               showSlides(slideIndex += n);
-            }
-            
-            function showSlides(n) {
+          }
+      
+          // Function to display the correct slide
+          function showSlides(n) {
               var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("demo");
-              var captionText = document.getElementById("caption");
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
+              if (n > slides.length) { slideIndex = 1; } // Wrap around if greater than the total number of slides
+              if (n < 1) { slideIndex = slides.length; } // Wrap around if less than 1
+      
+              // Hide all slides
               for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                  slides[i].style.display = "none";
               }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              captionText.innerHTML = dots[slideIndex-1].alt;
-            }
-            </script>
+      
+              // Show the current slide
+              slides[slideIndex - 1].style.display = "block"; // -1 because slides are zero-indexed
+      
+              // Optional: Update the caption or any other data if needed
+              // captionText.innerHTML = dots[slideIndex-1].alt; (if you have captions)
+          }
+      </script>
+      
         <footer>
             <p id="copyright">&copy; 2024 Savannah Dobbins</p>
             <div class="social">
