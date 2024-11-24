@@ -14,6 +14,7 @@ body {
 }
 h2 {
     margin: 0;
+    font-size: 1.5rem; /* Relative size based on root font size */
 }
 /* header */
 header {
@@ -45,6 +46,21 @@ nav a {
 nav a:hover {
     color: black;
 }
+/* For smaller screens (e.g., max-width 768px), reduce font size and padding */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;  /* Stack the links vertically */
+        align-items: flex-end; /* Align links to the right */
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    nav a {
+        font-size: 0.8em; /* Decrease font size */
+        padding: 15px; /* Reduce padding to decrease space between links */
+        margin-right: 0; /* Remove margin between links */
+        margin-bottom: 5px; /* Add bottom margin to separate the links */
+    }
+}
 /* landing page hero image */
 #hero {
     display: grid;
@@ -68,6 +84,7 @@ nav a:hover {
 }
 #hero-img {
     width: 100%;
+    height: auto; /* Ensure it scales with the width */
 }
 /* footer */
 footer {
