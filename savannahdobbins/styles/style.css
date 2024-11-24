@@ -208,6 +208,7 @@ footer .social img {
     opacity: 0.6;
   }
 
+/* about */
 .about-grid h1{
     margin: auto;
     width: 55%;
@@ -222,4 +223,42 @@ footer .social img {
     padding: 10px;
     margin-top: 2em;
     margin-bottom: 4em;
+}
+
+/* contact */
+.contact-grid h1{
+    margin: auto;
+    width: 55%;
+    font-size: 1.3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.contact_points {
+    display: flex; /* Or use grid or block depending on your layout */
+    flex-direction: column;  /* Stacks items vertically */
+    gap: 10px;
+    align-items: flex-start; /* Aligns items to the left */
+    overflow: visible;
+    margin: auto;
+    width: 55%;
+    margin-bottom: 10em;
+}
+
+/* Basic styles for links and button */
+.contact_points a, .contact_points button {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none; /* Remove underline from links */
+    border: none;
+    background-color: rgb(242, 242, 242);
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+    border-radius: 30px; /* Optional: rounded corners */
+}
+
+/* Hover effect: increase size and change color */
+.contact_points a:hover, .contact_points button:hover {
+    transform: scale(1.2) !important; /* Use !important to ensure it applies */
 }
