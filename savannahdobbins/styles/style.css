@@ -26,6 +26,7 @@ header {
     position: sticky;
     top: 0;
     overflow: hidden;
+    z-index: 1;
 }
 .logo {
     width: 4vw; /* 20% of the viewport width */
