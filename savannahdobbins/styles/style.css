@@ -23,12 +23,12 @@ header {
     background-color: white;
 }
 .logo {
-    width: 20vw; /* 20% of the viewport width */
+    width: 4vw; /* 20% of the viewport width */
     margin-left: 20vw;
 }
 #logo_link {
     padding-top: 5px;
-    justify-self: center;
+    justify-self: right;
     align-self: center;
 }
 nav {
