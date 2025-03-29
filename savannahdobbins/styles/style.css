@@ -121,16 +121,12 @@ footer {
     padding: 25px 50px;
     margin-top: 50px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: space-between;
 }
 footer a {
     color: #4F4F4F;
     text-decoration: none;
-    margin-right: 10px;
-}
-footer a:hover {
-    color: black;
 }
 footer p {
     font-size: .8em;
@@ -140,19 +136,13 @@ footer .social img {
     padding-bottom: 15px;
     width: 20px;
 }
-#copyright {
-    margin-right: 900px
-}
-#site_plan {
-    margin-right: 55px;
-}
 /* portfolio gallery */
 .portfolio-title {
     margin: auto;
     width: 55%;
     font-size: 2.25rem;
 }
-#gallery-intro, #about-info {
+#gallery-intro {
     font-size: medium;
     color: #4F4F4F;
     margin: auto;
@@ -259,48 +249,77 @@ footer .social img {
   }
 
 /* about */
-.work h1{
-    margin: auto;
+.work {
+    display: flex;
+    flex-direction: column;
     width: 55%;
-    font-size: 1.3em;
+    justify-self: center;
+}
+.work h1{
+    align-self: flex-start;
+    font-size: 2.25rem;
     font-family: 'Aboreto';
+    font-weight: lighter;
+}
+.work-cards {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.work-cards img{
+    width: 18.3% !important;
+    height: 100% !important;
+}
+.work .contact_points {
+    align-self: center;
 }
 .about-grid{
     display: flex;
-    align-items: center;
-
+    width: 55%;
+    justify-self: center;
+    gap: .5rem;
 }
 .about-grid h1{
-    margin: auto;
-    font-size: 1.3em;
+    font-size: 2.25rem;
     font-family: 'Aboreto';
+    font-weight: lighter;
+    margin: 0;
+    margin-top: .5rem;
 }
 #about-images {
     display: flex;
-    margin: auto;
     height: 19em;
     gap: 5px;
     padding: 10px;
-    margin-top: 2em;
     margin-bottom: 4em;
+}
+#about-info{
+    font-size: medium;
+    color: #4F4F4F;
+    line-height: 20pt;
+}
+.about-text{
+    display: flex;
+    flex-direction: column;
 }
 
 /* contact */
-.contact-grid h1{
-    margin: auto;
-    width: 55%;
-    font-size: 1.3em;
+.reach-out {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+.reach-out h2{
+    font-size: 2rem;
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
 .contact_points {
     display: flex; /* Or use grid or block depending on your layout */
-    gap: 10px;
+    gap: 15px;
     overflow: visible;
-    margin: auto;
-    width: 55%;
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 /* Basic styles for links and button */
