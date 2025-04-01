@@ -323,7 +323,7 @@ footer .social img {
     display: flex; /* Or use grid or block depending on your layout */
     gap: 15px;
     overflow: visible;
-    margin-bottom: 5em;
+    margin-bottom: 8em;
 }
 
 /* Basic styles for links and button */
@@ -342,6 +342,33 @@ footer .social img {
 /* Hover effect: increase size and change color */
 .contact_points a:hover, .contact_points button:hover {
     transform: scale(1.2) !important; /* Use !important to ensure it applies */
+}
+
+/* Fun Fact */
+.fun-fact {
+    display: flex;
+    width: 55%;
+    justify-self: center;
+    flex-direction: column;
+    border: solid;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.fun-fact p{
+    font-size: medium;
+    color: #4F4F4F;
+    line-height: 20pt;
+    margin-top: 0.5;
+    margin-bottom: 10%;
+}
+
+.fun-fact h1{
+    font-size: 2.25rem;
+    font-family: 'Aboreto';
+    font-weight: lighter;
+    margin: 0;
+    margin-top: 10%;
 }
 
 @media (max-width: 768px) {
