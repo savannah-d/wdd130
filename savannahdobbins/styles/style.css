@@ -254,6 +254,7 @@ footer .social img {
     flex-direction: column;
     width: 55%;
     justify-self: center;
+    margin-top: 5%;
 }
 .work h1{
     align-self: flex-start;
@@ -262,15 +263,18 @@ footer .social img {
     font-weight: lighter;
 }
 .work-cards {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 2%;
 }
 .work-cards img{
-    width: 18.3% !important;
-    height: 100% !important;
+    width: 32% !important;
+    object-fit: cover;
 }
 .work .contact_points {
     align-self: center;
+    padding-top: 10%;
 }
 .about-grid{
     display: flex;
