@@ -1,4 +1,4 @@
-import { Modal } from "./modal.js";
+import { Modal } from "modal.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const modal = new Modal(".modal");
