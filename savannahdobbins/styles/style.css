@@ -141,6 +141,29 @@ footer .social img {
     margin: auto;
     width: 55%;
     font-size: 2.25rem;
+    margin-top: 5%;
+}
+.portfolio-filter {
+    display: flex;
+    text-align: start;
+    margin: auto;
+    width: 55%;
+    margin-top: 90px;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.filter-btn {
+    font-family: 'Aboreto';
+    background-color: white;
+    border: none;
+    color: #4F4F4F;
+    cursor: pointer;
+}
+
+.filter-btn.selected, .filter-btn:hover {
+    border: 1px solid #4F4F4F;
+    padding: 5px;
 }
 #gallery-intro {
     font-size: medium;
@@ -191,6 +214,10 @@ footer .social img {
     width: 50%;
     max-width: 1200px;
   }
+  .modal-img {
+    width: 100%;
+    height: auto;
+}
   
   /* The Close Button */
   .close {

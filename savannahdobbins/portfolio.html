@@ -19,14 +19,16 @@
                 <a href="portfolio.html">Portfolio</a>
             </nav>
         </header>
-        <div class="portfolio-nav">
         <h1 class="portfolio-title">Visual storytelling comes in many forms.</h1>
-
+        <div class="portfolio-filter">
+          <button data-filter="photo" class="filter-btn">Photography</button>
+          <button data-filter="graphic" class="filter-btn">Graphic Design</button>
+          <button data-filter="uxui" class="filter-btn">UX/UI</button>
         </div>
         <p id="gallery-intro">The images in this portfolio use light and shadow, among other elements, to encourage feelings of peace, wonder, and appreciation for life and creation in its different forms. If you look for it, beauty, purpose, and connection can be found, even in the smallest of details.</p>
+        <script type="module" src="scripts/portfolio-filter.js"></script>
 
-
-        <main class="gallery">
+        <main class="gallery photography-gallery">
             <img src="images/cactus-spikes.jpg" class="gallery_img" alt="macro of spikes on cactus" onclick="openModal();currentSlide(1)">
             <img src="images/algae-tire.jpg" class="gallery_img" alt="half-submerged tire with algae growing on it" onclick="openModal();currentSlide(2)">
             <img src="images/arches.jpg" class="gallery_img" alt="structural arches going to a vanishing point" onclick="openModal();currentSlide(3)">
@@ -203,48 +205,13 @@
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
-        <script>
-          var slideIndex = 1;  // Start at the first slide
-          var slides = document.getElementsByClassName("mySlides");
-      
-          // Open the modal and show the first slide
-          function openModal() {
-              document.getElementById("myModal").style.display = "block";
-          }
-      
-          // Close the modal
-          function closeModal() {
-              document.getElementById("myModal").style.display = "none";
-          }
-      
-          // Set the current slide based on the passed index
-          function currentSlide(n) {
-              slideIndex = n;  // Update slideIndex to the clicked image
-              showSlides(slideIndex);  // Show the correct slide
-          }
-      
-          // Next/Previous controls
-          function plusSlides(n) {
-              showSlides(slideIndex += n);
-          }
-      
-          // Function to display the correct slide
-          function showSlides(n) {
-              var i;
-              if (n > slides.length) { slideIndex = 1; } // Wrap around if greater than the total number of slides
-              if (n < 1) { slideIndex = slides.length; } // Wrap around if less than 1
-      
-              // Hide all slides
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-      
-              // Show the current slide
-              slides[slideIndex - 1].style.display = "block"; // -1 because slides are zero-indexed
-
-          }
-      </script>
-      
+        <div class="gallery graphicdesign-gallery" style="display: none;">
+          <!-- Graphic design content -->
+        </div>
+        <div class="gallery uiux-gallery" style="display: none;">
+          <!-- UI/UX content -->
+        </div>
+        <script src="portfolio-filter.js" defer></script>
         <footer>
             <p id="copyright">&copy; 2023-2024 Savannah Dobbins</p>
             <div class="social">
