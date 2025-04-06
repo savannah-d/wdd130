@@ -1,17 +1,38 @@
-
+// scripts/portfolio-filter.js
 window.addEventListener("DOMContentLoaded", () => {
-    const photoGallery = document.querySelector(".photography-gallery");
-    const graphicGallery = document.querySelector(".graphicdesign-gallery");
-    const uiuxGallery = document.querySelector(".uiux-gallery");
-    const photoBtn = document.querySelector('[data-filter="photo"]');
+    const galleries = {
+      photo: document.querySelector(".photography-gallery"),
+      graphic: document.querySelector(".graphicdesign-gallery"),
+      uxui: document.querySelector(".uiux-gallery")
+    };
   
-    // Show photography gallery by default
-    photoGallery.style.display = "block";
-    graphicGallery.style.display = "none";
-    uiuxGallery.style.display = "none";
+    const buttons = document.querySelectorAll(".filter-btn");
   
-    // Set selected button
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('selected'));
-    photoBtn.classList.add('selected');
+    function showGallery(type) {
+      Object.entries(galleries).forEach(([key, gallery]) => {
+        if (key === type) {
+          gallery.classList.add("active");
+          gallery.classList.remove("hidden");
+        } else {
+          gallery.classList.add("hidden");
+          gallery.classList.remove("active");
+        }
+      });
+  
+      buttons.forEach(btn => btn.classList.remove("selected"));
+      document.querySelector(`[data-filter="${type}"]`).classList.add("selected");
+    }
+  
+    // Add event listeners
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filterType = btn.getAttribute("data-filter");
+        showGallery(filterType);
+      });
+    });
+  
+    // Initialize
+    showGallery("photo");
+
   });
   

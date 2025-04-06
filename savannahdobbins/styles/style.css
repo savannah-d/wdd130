@@ -190,6 +190,16 @@ footer .social img {
  .gallery_img:hover {
      opacity: 0.7;
  }
+ .photography-gallery.active {
+    line-height: 0;
+    column-count: 2;
+    column-gap: 10px;
+    width: 55%;
+    margin: auto;
+ }
+ .gallery.hidden {
+    display: none;
+ }
  /* gallery modal */
   /* The Modal (background) */
   .modal {
@@ -347,7 +357,7 @@ footer .social img {
 }
 
 .contact_points {
-    display: flex; /* Or use grid or block depending on your layout */
+    display: flex;
     gap: 15px;
     overflow: visible;
     margin-bottom: 8em;
